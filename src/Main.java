@@ -5,41 +5,30 @@ public class Main {
 //        //задание 1
         System.out.println("Task 1.");
         int[] array = {1, 1, 0, 0, 1, 1, 0, 0};
-
         System.out.println(Arrays.toString(array));
         changeZeroesAndOnes(array);
         System.out.println(Arrays.toString(array));
-
         //задание2
         System.out.println("Task 2");
         int[] emptyArray = new int[8];
-
         System.out.println(Arrays.toString(emptyArray));
         fillArrayWithProgression(emptyArray);
         System.out.println(Arrays.toString(emptyArray));
-
         // задание 3
-
         System.out.println("Task 3");
         int[] myArray = {1, 5, 3, 2, 11, 4, 5, 2, 4, 8, 9, 1};
-
         System.out.println(Arrays.toString(myArray));
         multiplyOnSixIn(myArray);
         System.out.println(Arrays.toString(myArray));
-
         //задание 4
         System.out.println("Task 4");
-
         int[][] square = new int[10][10]; // Создать квадратный двумерный целочисленный массив (количество строк и столбцов одинаковое)
         System.out.println("With zeroes");
         printSquare(square);
-
         fillDiagonalWithOnes(square);
         System.out.println("With ones.");
         printSquare(square);
-
 //             задание 5
-
         System.out.println("Task 5");
         int[] minMaxArray = {1, 2, 7, 4, 0};
         System.out.println(Arrays.toString(minMaxArray));
@@ -52,12 +41,7 @@ public class Main {
         System.out.println(Arrays.toString(sumsArray));
         boolean isBalanced = hasBalance(sumsArray);
         System.out.println("Суммы правой и левой части где либо равны? " + isBalanced);
-
-
-
-
 //                Задание 7
-
         System.out.println("Task 7.");
         int[] rightShiftArray = { 1, 2, 3, 4, 5, 6, 7 };
         System.out.println(Arrays.toString(rightShiftArray));
@@ -70,8 +54,6 @@ public class Main {
         System.out.println(Arrays.toString(leftShiftArray));
 
     }
-
-
     static void changeZeroesAndOnes(int[] inputArray){
         for (int i = 0; i < inputArray.length; i++){
             inputArray[i] = 1 - inputArray[i];
@@ -92,7 +74,6 @@ public class Main {
         for (int i = 0; i < square.length; i++) {
             // диагональные элементы имеют одинаковые индексы
             square[i][i] = 1;
-
             // заполнение другой диагонали
             square[i][square[i].length - 1 - i] = 1;
         }
@@ -117,12 +98,9 @@ public class Main {
                 max = inputArray[i];
             }
         }
-
         System.out.println("Minimum: " + min);
         System.out.println("Maximum: " + max);
     }
-
-
     static boolean hasBalance(int[] inputArray){
         int leftSum = 0;
         // метод должен вернуть true, если в массиве есть место, в котором сумма левой и правой части массива равны.
@@ -136,10 +114,8 @@ public class Main {
                 return true;
             }
         }
-
         return false;
     }
-
     static void rightShift(int [] inputArray){
         int buffer = inputArray[0];
         inputArray[0] = inputArray[inputArray.length - 1];
@@ -163,7 +139,6 @@ public class Main {
             }
         }
     }
-
     static void leftShift(int [] inputArray){
         int buffer = inputArray[inputArray.length - 1];
         inputArray[inputArray.length - 1] = inputArray[0];
